@@ -1,0 +1,20 @@
+
+/* .pc-items
+{
+ width: 80%;
+ display: flex;
+} */
+.image-product{
+    border-radius: 10px;
+    width: 100%;
+    height: 152px;
+    object-fit: contain;
+}
+.addtocart-btn
+{
+    border: solid;
+    background-color: white;
+    border-radius: 15px;
+    padding: 11px;
+    color: blue;
+}

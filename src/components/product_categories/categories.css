@@ -1,0 +1,13 @@
+li{
+    font-size: 22px;
+    list-style: none;
+    background-color: deepskyblue;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+ul{
+    justify-content: center;
+}

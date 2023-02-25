@@ -7,11 +7,11 @@ import ProductCard from "../components/ProductCard/ProductCard";
 import "./home.css"
 import ProCategories from "../components/product_categories/ProCategories";
 
-function Home({ products ,categories}) {
+function Home({ products ,categories,activeUser,setUserActive}) {
   return (
     <div>
       <Link to="">
-        <Header />
+        <Header activeUser={activeUser} setUserActive={setUserActive}/>
         <Banner />
         <div className="productView-container">
           <div className="pv-heading pb-4">

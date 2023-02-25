@@ -9,6 +9,7 @@ function App() {
 
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+  const[activeUser,setUserActive]=useState(false)
 
   async function getProducts() {
     const response = await fetch("https://fakestoreapi.com/products");
@@ -31,8 +32,8 @@ function App() {
     <div>
         <Router>
             <Routes>
-                <Route path='/' element={<Home products={products} categories={categories}/>}/>
-                <Route path='/login' element={<Login/>}/>
+                <Route path='/' element={<Home products={products} categories={categories} activeUser={activeUser} setUserActive={setUserActive}/>}/>
+                <Route path='/login' element={<Login setUserActive={setUserActive}/>}/>
                 <Route path='/signup' element={<SignUp/>}/>
                 <Route path="/cart" element={<Cart/>}/>
              </Routes>

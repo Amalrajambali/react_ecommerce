@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 function SignupPage() {
   return (
     <div>
-      <Link to="signup">
         <SignUp />
-      </Link>
     </div>
   );
 }

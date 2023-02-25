@@ -1,10 +1,18 @@
 import React from "react";
 import "./header.css";
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { auth } from "../../firebase/Config";
+import {signOut} from "firebase/auth";
 
-function Header() {
+function Header({ activeUser ,setUserActive}) {
   const navigate = useNavigate();
 
+  async function signout()
+  {
+    await signOut(auth)
+    await navigate("/login")
+    setUserActive(false)
+  }
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
@@ -69,14 +77,27 @@ function Header() {
           </form>
           <ul class="navbar-nav mr-aut0">
             <li>
-             <Link to="/cart" className="btn btn-primary">Cart</Link>
+              <Link to="/cart" className="btn btn-primary">
+                Cart
+              </Link>
             </li>
-            <li class="nav-item">
-            <Link to="/login" className="btn btn-primary">Login</Link>
-            </li>
-            <li class="nav-item">
-            <Link to="/signup" className="btn btn-primary">Sign up</Link>
-            </li>
+
+            {/* <li class="nav-item">
+                <Link to="/login" className="btn btn-primary">
+                  Login
+                </Link>
+              </li> */}
+              
+            {activeUser ? (
+               <li style={{backgroundColor: "black",borderRadius: "12px" }}> <button onClick={signout}>SignOut</button> </li>
+            ) : (
+              <li class="nav-item">
+                <Link to="/signup" className="btn btn-primary">
+                  Sign up
+                </Link>
+              </li>
+            )}
+            
           </ul>
         </div>
       </nav>

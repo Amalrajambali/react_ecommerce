@@ -4,6 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { auth } from "../../firebase/Config";
 import {signOut} from "firebase/auth";
 
+
 function Header({ activeUser ,setUserActive}) {
   const navigate = useNavigate();
 
@@ -13,6 +14,10 @@ function Header({ activeUser ,setUserActive}) {
     await navigate("/login")
     setUserActive(false)
   }
+  let products = JSON.parse(localStorage.getItem("CartItems"));
+  let noItems=products.length
+
+
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
@@ -34,51 +39,17 @@ function Header({ activeUser ,setUserActive}) {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">
-                Home <span class="sr-only">(current)</span>
-              </a>
+              <Link to="">
+                Home 
+              </Link>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">
-                  Action
-                </a>
-                <a class="dropdown-item" href="#">
-                  Another action
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </div>
-            </li>
+            
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
+      
           <ul class="navbar-nav mr-aut0">
             <li>
               <Link to="/cart" className="btn btn-primary">
-                Cart
+              <i class="fa fa-shopping-cart" style={{fontSize:"24px"}}></i><span style={{marginLeft:"5px"}}>{noItems+1}</span>
               </Link>
             </li>
 

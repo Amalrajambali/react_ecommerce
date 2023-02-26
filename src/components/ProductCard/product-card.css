@@ -18,3 +18,16 @@
     padding: 11px;
     color: blue;
 }
+.addtocart-btn:hover{
+    background-color: blue;
+    cursor: pointer;
+    color: white;
+}
+.item-btn
+{
+    padding: 30px; 
+    border-radius: 10px;
+    background-color: white;
+    padding: 3px;
+    font-size: 10px;
+}

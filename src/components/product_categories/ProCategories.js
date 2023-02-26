@@ -2,7 +2,6 @@ import React from 'react'
 import "./categories.css"
 
 function ProCategories({categories}) {
-    console.log(categories)
   return (
     <div>
         <ul style={{display:"flex"}}>

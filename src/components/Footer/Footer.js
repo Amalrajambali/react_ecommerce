@@ -12,7 +12,7 @@ function Footer() {
               href="#!"
               role="button"
             >
-              <i class="fab fa-facebook-f"></i>
+              <i class="fa fa-facebook-f"></i>
             </a>
 
             <a
@@ -20,7 +20,7 @@ function Footer() {
               href="#!"
               role="button"
             >
-              <i class="fab fa-twitter"></i>
+              <i class="fa fa-twitter"></i>
             </a>
 
             <a
@@ -28,7 +28,7 @@ function Footer() {
               href="#!"
               role="button"
             >
-              <i class="fab fa-google"></i>
+              <i class="fa fa-google"></i>
             </a>
 
             <a
@@ -36,7 +36,7 @@ function Footer() {
               href="#!"
               role="button"
             >
-              <i class="fab fa-instagram"></i>
+              <i class="fa fa-instagram"></i>
             </a>
 
             <a
@@ -44,7 +44,7 @@ function Footer() {
               href="#!"
               role="button"
             >
-              <i class="fab fa-linkedin-in"></i>
+              <i class="fa fa-linkedin-in"></i>
             </a>
 
             <a
@@ -52,7 +52,7 @@ function Footer() {
               href="#!"
               role="button"
             >
-              <i class="fab fa-github"></i>
+              <i class="fa fa-github"></i>
             </a>
           </section>
         </div>

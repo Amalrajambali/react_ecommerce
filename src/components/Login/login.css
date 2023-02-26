@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     padding: 168px;
+    background: linear-gradient(135deg, aliceblue 60%, cyan);
 }
 .login-form
 {

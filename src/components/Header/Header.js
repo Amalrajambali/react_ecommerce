@@ -49,7 +49,7 @@ function Header({ activeUser ,setUserActive}) {
           <ul class="navbar-nav mr-aut0">
             <li>
               <Link to="/cart" className="btn btn-primary">
-              <i class="fa fa-shopping-cart" style={{fontSize:"24px"}}></i><span style={{marginLeft:"5px"}}>{noItems+1}</span>
+              <i class="fa fa-shopping-cart" style={{fontSize:"24px"}}></i><span style={{marginLeft:"5px"}}>{noItems!=0 ? noItems+1:""}</span>
               </Link>
             </li>
 

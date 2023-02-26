@@ -15,7 +15,7 @@ function Header({ activeUser ,setUserActive}) {
     setUserActive(false)
   }
   let products = JSON.parse(localStorage.getItem("CartItems"));
-  let noItems=products.length
+  let noItems=products?.length
 
 
   return (

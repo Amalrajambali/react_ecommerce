@@ -33,7 +33,7 @@ function App() {
     allCategories();
   }, []);
   
-  
+
   return (
     <div>
         <Router>

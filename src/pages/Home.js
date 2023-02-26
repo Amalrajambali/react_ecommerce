@@ -17,7 +17,7 @@ function Home({
 }) {
   return (
     <div>
-      <Link to="/">
+      <Link to=" ">
         <Banner />
 
         <div className="pv-heading pb-4">
